@@ -13,6 +13,8 @@
 #include "Base64.h"
 #include "File.h"
 
+using namespace report_generator;
+
 Image::Image()
 {
 }

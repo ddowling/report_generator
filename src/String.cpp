@@ -12,6 +12,9 @@
 #include "String.h"
 #include <algorithm>
 
+namespace report_generator
+{
+
 std::vector<std::string> split_string(const std::string &str,
                                       const std::string &sep)
 {
@@ -91,3 +94,4 @@ std::string repeat(const std::string &str, int n)
     return ret;
 }
 
+}

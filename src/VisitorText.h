@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : VisitorText
  *
  * Author      : Denis Dowling
@@ -14,6 +14,9 @@
 
 #include "Report.h"
 #include <sstream>
+
+namespace report_generator
+{
 
 class VisitorText : public ReportVisitor
 {
@@ -45,4 +48,5 @@ class VisitorText : public ReportVisitor
     virtual void visitImage(Image &i);
 };
 
+}
 #endif

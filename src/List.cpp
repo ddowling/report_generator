@@ -12,6 +12,8 @@
 #include "List.h"
 #include <sstream>
 
+using namespace report_generator;
+
 List::List()
     : orderedList(false), definitionList(false)
 {

@@ -21,13 +21,14 @@
 
 #include "iostream"
 using namespace std;
+using namespace report_generator;
 
 int main(int argc, char **argv)
 {
     bool do_html = false;
     if (argc > 1)
     {
-        if (std::string(argv[1]) == "html")
+        if (string(argv[1]) == "html")
             do_html = true;
 	else if (!setCodePageFromString(argv[1]))
 	{
@@ -60,7 +61,7 @@ int main(int argc, char **argv)
 	t.addRow();
 	for (int c = 0; c < 3; c++)
 	{
-	    std::ostringstream ss;
+	    ostringstream ss;
 	    ss << "data " << r << c;
 	    t.addCell(ss.str());
 	}

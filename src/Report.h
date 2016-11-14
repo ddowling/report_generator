@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : Report
  *
  * Author      : Denis Dowling
@@ -15,6 +15,9 @@
 #include <string>
 #include <vector>
 #include <boost/shared_ptr.hpp>
+
+namespace report_generator
+{
 
 // Forward declarations for the visitor
 class Report;
@@ -94,4 +97,5 @@ class Report : public ReportElement
     std::string author;
 };
 
+}
 #endif

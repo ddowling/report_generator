@@ -14,6 +14,9 @@
 
 #include "Report.h"
 
+namespace report_generator
+{
+
 class Image : public ReportElement
 {
  public:
@@ -34,4 +37,5 @@ class Image : public ReportElement
     std::string text;
 };
 
+}
 #endif

@@ -15,6 +15,9 @@
 #include <vector>
 #include "Report.h"
 
+namespace report_generator
+{
+
 class List : public ReportElement
 {
  public:
@@ -51,4 +54,5 @@ class List : public ReportElement
     ListItemVector listItems;
 };
 
+}
 #endif

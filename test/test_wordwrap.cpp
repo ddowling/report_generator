@@ -4,8 +4,9 @@
 #include "String.h"
 
 using namespace std;
+using namespace report_generator;
 
-void show(const char *label, std::vector<std::string> &sv)
+void show(const char *label, vector<string> &sv)
 {
     cout << label << " lines=" << lines(sv) << " columns=" << columns(sv)
 	 << " :" << endl;
@@ -16,7 +17,7 @@ void show(const char *label, std::vector<std::string> &sv)
 int main()
 {
     const char *s0 = "Short line with no wrap";
-    std::vector<std::string> sv = wordWrap(s0, 80);
+    vector<string> sv = wordWrap(s0, 80);
     show("Word wrapped 80", sv);
 
     const char *s1 =

@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : Base64
  *
  * Author      : Denis Dowling
@@ -13,6 +13,9 @@
 #define BASE64_H
 
 #include <string>
+
+namespace report_generator
+{
 
 class Base64
 {
@@ -29,4 +32,5 @@ class Base64
 
 };
 
+}
 #endif

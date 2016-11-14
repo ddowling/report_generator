@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : Section
  *
  * Author      : Denis Dowling
@@ -13,6 +13,9 @@
 #define SECTION_H
 
 #include "Report.h"
+
+namespace report_generator
+{
 
 class Section : public ReportElement
 {
@@ -31,4 +34,5 @@ class Section : public ReportElement
     std::string heading;
 };
 
+}
 #endif

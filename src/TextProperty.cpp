@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : TextProperty
  *
  * Author      : Denis Dowling
@@ -10,6 +10,9 @@
  * Description : class to implement helper functions to get various properties on text
  */
 #include "TextProperty.h"
+
+namespace report_generator
+{
 
 std::string red(const std::string &s)
 {
@@ -31,3 +34,4 @@ std::string bold(const std::string &s)
     return "<b>" + s + "</b>";
 }
 
+}

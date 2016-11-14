@@ -13,6 +13,9 @@
 #include <stdio.h>
 #include "String.h"
 
+namespace report_generator
+{
+
 static CodePage codePage = CP_ASCII;
 
 // MSDOS should really be called Code page 437. Set this in
@@ -166,4 +169,6 @@ bool setCodePageFromString(const std::string &str)
     }
 
     return false;
+}
+
 }

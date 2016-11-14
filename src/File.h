@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : File
  *
  * Author      : Denis Dowling
@@ -14,6 +14,9 @@
 
 #include <string>
 #include <vector>
+
+namespace report_generator
+{
 
 class File
 {
@@ -30,4 +33,5 @@ class File
     static std::string getExtension(const std::string &filename);
 };
 
+}
 #endif

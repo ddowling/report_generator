@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : Paragraph
  *
  * Author      : Denis Dowling
@@ -13,6 +13,9 @@
 #define PARAGRAPH_H
 
 #include "Report.h"
+
+namespace report_generator
+{
 
 class Paragraph : public ReportElement
 {
@@ -33,4 +36,5 @@ class Paragraph : public ReportElement
     std::string text;
 };
 
+}
 #endif

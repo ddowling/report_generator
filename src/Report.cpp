@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : Report
  *
  * Author      : Denis Dowling
@@ -11,7 +11,9 @@
  */
 #include "Report.h"
 #include "Section.h"
-#include "Assert.h"
+#include <stdexcept>
+
+using namespace report_generator;
 
 // ********
 // Visitor pattern for the Report class. It will be called when we traverse
@@ -65,7 +67,8 @@ ReportElement::~ReportElement()
 
 void ReportElement::appendChild(ReportElementPtr child)
 {
-    ASSERT(child->parent == 0);
+    if (child->parent != 0)
+        throw std::invalid_argument("Already added");
 
     child->parent = this;
     children.push_back(child);

@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : Base64
  *
  * Author      : Denis Dowling
@@ -10,7 +10,9 @@
  * Description : Encode and decode a string in Base64 format
  */
 #include "Base64.h"
-#include "Assert.h"
+#include <stdexcept>
+
+using namespace report_generator;
 
 char Base64::encodeChar(unsigned char b)
 {
@@ -29,8 +31,7 @@ char Base64::encodeChar(unsigned char b)
     if (b == 63)
 	return '/';
 
-    assert(0 /* Cannot encode */);
-    return 0;
+    throw std::domain_error("cannot encode");
 }
 
 unsigned char Base64::decodeChar(char c)
@@ -50,7 +51,7 @@ unsigned char Base64::decodeChar(char c)
     if (c == '/' || c == '=')
 	return 63;
 
-    ASSERT(0 /* Invalid base64 char */);
+    throw std::domain_error("invalid base64 char");
 
     return 0;
 }

@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : VisitorText
  *
  * Author      : Denis Dowling
@@ -18,6 +18,8 @@
 #include "List.h"
 #include "Image.h"
 #include <boost/foreach.hpp>
+
+using namespace report_generator;
 
 VisitorText::VisitorText(bool use_colour)
     : sectionLevel(0), useColour(use_colour)

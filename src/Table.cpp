@@ -17,6 +17,8 @@
 #include <algorithm>
 #include <boost/foreach.hpp>
 
+using namespace report_generator;
+
 Table::Table()
 {
     tableClass = "reporttable";

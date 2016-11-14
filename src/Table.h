@@ -16,6 +16,9 @@
 #include "Report.h"
 #include "Colour.h"
 
+namespace report_generator
+{
+
 class Table : public ReportElement
 {
  public:
@@ -73,4 +76,5 @@ class Table : public ReportElement
     std::string fmtHTMLCell(const Cell &c);
 };
 
+}
 #endif

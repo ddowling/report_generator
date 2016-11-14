@@ -14,6 +14,9 @@
 
 #include <string>
 
+namespace report_generator
+{
+
 // Define the box drawing characters in terms of these primatives.
 // We OR the primatives together to.
 // Make the desired character. This makes it easy to connect lines to
@@ -53,4 +56,5 @@ CodePage getCodePage();
 
 bool setCodePageFromString(const std::string &str);
 
+}
 #endif

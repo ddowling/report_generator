@@ -11,6 +11,8 @@
  */
 #include "Colour.h"
 
+namespace report_generator
+{
 static bool ansiColour = false;
 
 // Control if ANSI colour support is to be enabled
@@ -81,4 +83,6 @@ std::string setHTMLColour(Colour c, const std::string &str)
     ret += "</font>";
 
     return ret;
+}
+
 }

@@ -15,6 +15,9 @@
 #include <string>
 #include <vector>
 
+namespace report_generator
+{
+
 std::vector<std::string> wordWrap(const std::string &str,
                                   int max_width);
 
@@ -27,4 +30,5 @@ std::vector<std::string> wordWrapOptimum(const std::string &str,
 int lines(const std::vector<std::string> &sv);
 int columns(const std::vector<std::string> &sv);
 
+}
 #endif

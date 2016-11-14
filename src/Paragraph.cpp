@@ -1,7 +1,7 @@
 /* $Id$
  *
  * Copyright   : (c) 2015 Open Source Solutions Pty Ltd. All Rights Reserved
- * Project     : SecurityTools
+ * Project     : report_generator
  * File        : Paragraph
  *
  * Author      : Denis Dowling
@@ -13,6 +13,8 @@
 #include "Table.h"
 #include "List.h"
 #include "Image.h"
+
+using namespace report_generator;
 
 Paragraph::Paragraph()
 {

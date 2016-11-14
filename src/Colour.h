@@ -14,6 +14,9 @@
 
 #include <string>
 
+namespace report_generator
+{
+
 enum Colour
 {
     COL_DEFAULT,
@@ -29,4 +32,5 @@ void setANSIColour(bool s);
 std::string setTextColour(Colour c, const std::string &str);
 std::string setHTMLColour(Colour c, const std::string &str);
 
+}
 #endif
