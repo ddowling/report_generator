@@ -10,16 +10,17 @@
  * Description : Helper functions for working with files
  */
 #include "File.h"
-#include "String.h"
 #include <fstream>
 #include <boost/foreach.hpp>
+#include <boost/algorithm/string.hpp>
 
 using namespace report_generator;
 
 std::string File::findOnPath(const std::string &colon_path,
                              const std::string &file)
 {
-    std::vector<std::string> path = split_string(colon_path, ":");
+    std::vector<std::string> path;
+    boost::split(path, colon_path, boost::is_any_of(":"));
 
     return findOnPath(path, file);
 }
@@ -74,10 +75,7 @@ std::string File::readToString(const std::string &filename)
 	return s;
     }
     else
-    {
-        // FIXME exception
-        "";
-    }
+        return "";
 }
 
 std::string File::getExtension(const std::string &filename)

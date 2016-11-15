@@ -43,7 +43,7 @@ void VisitorXML::enterReport(Report &r)
 	ss << "<author" + author + "</author>\n";
 }
 
-void VisitorXML::exitReport(Report &r)
+void VisitorXML::exitReport(Report & /*r*/)
 {
     ss << "</report>\n";
 }
@@ -54,7 +54,7 @@ void VisitorXML::enterSection(Section &s)
     ss << "<heading>" << s.getHeading() << "</heading>\n";
 }
 
-void VisitorXML::exitSection(Section &s)
+void VisitorXML::exitSection(Section & /*s*/)
 {
     ss << "</section>\n";
 }
@@ -64,7 +64,7 @@ void VisitorXML::enterParagraph(Paragraph &p)
     ss << "<para>" << p.getText() << "</para>\n";
 }
 
-void VisitorXML::exitParagraph(Paragraph &p)
+void VisitorXML::exitParagraph(Paragraph & /*p*/)
 {
     // Nothing to do
 }
@@ -74,7 +74,7 @@ void VisitorXML::enterTable(Table &t)
     ss << t.renderAsXML();
 }
 
-void VisitorXML::exitTable(Table &t)
+void VisitorXML::exitTable(Table & /*t*/)
 {
     // Nothing to do
 }
@@ -84,7 +84,7 @@ void VisitorXML::enterList(List &l)
     ss << l.renderAsXML();
 }
 
-void VisitorXML::exitList(List &l)
+void VisitorXML::exitList(List & /*l*/)
 {
     // Nothing to do
 }

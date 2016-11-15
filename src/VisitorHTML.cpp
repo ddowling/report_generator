@@ -94,7 +94,7 @@ void VisitorHTML::enterReport(Report &r)
        << "<body id=\"report\">\n";
 }
 
-void VisitorHTML::exitReport(Report &r)
+void VisitorHTML::exitReport(Report & /*r*/)
 {
     ss << "</body>\n"
        << "</html>\n";
@@ -108,7 +108,7 @@ void VisitorHTML::enterSection(Section &s)
        << "</h" << sectionLevel << ">\n";
 }
 
-void VisitorHTML::exitSection(Section &s)
+void VisitorHTML::exitSection(Section & /*s*/)
 {
     sectionLevel--;
 }
@@ -118,7 +118,7 @@ void VisitorHTML::enterParagraph(Paragraph &p)
     ss << "<p>" << p.getText() << "</p>\n";
 }
 
-void VisitorHTML::exitParagraph(Paragraph &p)
+void VisitorHTML::exitParagraph(Paragraph & /*p*/)
 {
     // Nothing to do
 }
@@ -128,7 +128,7 @@ void VisitorHTML::enterTable(Table &t)
     ss << t.renderAsHTML();
 }
 
-void VisitorHTML::exitTable(Table &t)
+void VisitorHTML::exitTable(Table & /*t*/)
 {
     // Nothing to do
 }
@@ -138,7 +138,7 @@ void VisitorHTML::enterList(List &l)
     ss << l.renderAsHTML();
 }
 
-void VisitorHTML::exitList(List &l)
+void VisitorHTML::exitList(List & /*l*/)
 {
     // Nothing to do
 }

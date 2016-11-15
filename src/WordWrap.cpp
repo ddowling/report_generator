@@ -10,7 +10,7 @@
  * Description : Helper functions to wrap blocks of text
  */
 #include "WordWrap.h"
-#include "String.h"
+#include <boost/algorithm/string.hpp>
 
 namespace report_generator
 {
@@ -19,7 +19,8 @@ std::vector<std::string> wordWrap(const std::string &str, int max_width)
 {
     std::vector<std::string> res;
 
-    std::vector<std::string> lines = split_string(str, "\n");
+    std::vector<std::string> lines;
+    boost::split(lines, str, boost::is_any_of("\n"));
 
     if (max_width < 0)
 	return lines;
@@ -30,7 +31,8 @@ std::vector<std::string> wordWrap(const std::string &str, int max_width)
     {
 	std::string line;
 
-        std::vector<std::string> words = split_string(lines[i], " \t");
+        std::vector<std::string> words;
+        boost::split(words, lines[i], boost::is_any_of(" \t"));
 
 	int num_words = words.size();
 	for(int j = 0; j < num_words; j++)

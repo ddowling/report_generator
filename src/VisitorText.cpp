@@ -31,15 +31,15 @@ std::string VisitorText::getText() const
     return ss.str();
 }
 
-void VisitorText::enterReport(Report &r)
+void VisitorText::enterReport(Report & /*r*/)
 {
 }
 
-void VisitorText::exitReport(Report &r)
+void VisitorText::exitReport(Report & /*r*/)
 {
 }
 
-void VisitorText::enterSection(Section &s)
+void VisitorText::enterSection(Section & s)
 {
     sectionLevel++;
 
@@ -49,7 +49,7 @@ void VisitorText::enterSection(Section &s)
     ss << rule << "\n\n";
 }
 
-void VisitorText::exitSection(Section &s)
+void VisitorText::exitSection(Section & /*s*/)
 {
     sectionLevel--;
 }
@@ -62,7 +62,7 @@ void VisitorText::enterParagraph(Paragraph &p)
 	ss << s << "\n";
 }
 
-void VisitorText::exitParagraph(Paragraph &p)
+void VisitorText::exitParagraph(Paragraph & /*p*/)
 {
     ss << "\n";
 }
@@ -72,7 +72,7 @@ void VisitorText::enterTable(Table &t)
     ss << t.renderAsASCII(useColour);
 }
 
-void VisitorText::exitTable(Table &t)
+void VisitorText::exitTable(Table & /*t*/)
 {
     // Nothing to do
 }
@@ -82,7 +82,7 @@ void VisitorText::enterList(List &l)
     ss << l.renderAsASCII();
 }
 
-void VisitorText::exitList(List &l)
+void VisitorText::exitList(List & /*l*/)
 {
     // Nothing to do
 }

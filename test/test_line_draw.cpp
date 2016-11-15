@@ -9,8 +9,8 @@
  *
  * Description : ASCII Art line drawing characters
  */
+#include <string>
 #include <stdio.h>
-#include "String.h"
 
 std::string unicodeToUTF8(int *utf16_str, int len)
 {
@@ -61,4 +61,5 @@ int main()
 	printf("h(%04x) = %s\n", i, s);
     }
 
+    return 0;
 }

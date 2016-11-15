@@ -1,7 +1,6 @@
 #include <vector>
 #include <iostream>
 #include "WordWrap.h"
-#include "String.h"
 
 using namespace std;
 using namespace report_generator;
@@ -24,13 +23,6 @@ int main()
 	"This is line1\n"
 	"This is line2\n"
 	"This is line3";
-
-    sv = split_string(s1, "\n");
-
-    show("Lines", sv);
-
-    sv = split_string(s1, " \t\n");
-    show("Words", sv);
 
     sv = wordWrap(s1, 20);
     show("Word wrapped 20", sv);

@@ -13,9 +13,9 @@
 #include "WordWrap.h"
 #include "BoxDrawingCharacters.h"
 #include "TextProperty.h"
-#include "String.h"
 #include <algorithm>
 #include <boost/foreach.hpp>
+#include <boost/algorithm/string.hpp>
 
 using namespace report_generator;
 
@@ -474,7 +474,8 @@ std::string Table::fmtHTMLCell(const Cell &c)
     std::string ret;
 
     // Break the cell up into lines
-    std::vector<std::string> sv = split_string(c.contents, "\n");
+    std::vector<std::string> sv;
+    boost::split(sv, c.contents, boost::is_any_of("\n"));
     if (sv.size() > 1)
     {
         BOOST_FOREACH(std::string &s, sv)

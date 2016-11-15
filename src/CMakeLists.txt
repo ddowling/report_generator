@@ -10,7 +10,6 @@ add_library(report_generator STATIC
     VisitorHTML.cpp
     VisitorText.cpp
     VisitorXML.cpp
-    String.cpp
     TextProperty.cpp
     WordWrap.cpp
     BoxDrawingCharacters.cpp

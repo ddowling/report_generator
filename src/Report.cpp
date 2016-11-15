@@ -22,35 +22,35 @@ ReportVisitor::~ReportVisitor()
 {
 }
 
-void ReportVisitor::enterReport(Report &r)
+void ReportVisitor::enterReport(Report & /*r*/)
 {
 }
 
-void ReportVisitor::exitReport(Report &r)
+void ReportVisitor::exitReport(Report & /*r*/)
 {
 }
 
-void ReportVisitor::enterSection(Section &s)
+void ReportVisitor::enterSection(Section & /*s*/)
 {
 }
 
-void ReportVisitor::exitSection(Section &s)
+void ReportVisitor::exitSection(Section & /*s*/)
 {
 }
 
-void ReportVisitor::enterParagraph(Paragraph &p)
+void ReportVisitor::enterParagraph(Paragraph & /*p*/)
 {
 }
 
-void ReportVisitor::exitParagraph(Paragraph &p)
+void ReportVisitor::exitParagraph(Paragraph & /*p*/)
 {
 }
 
-void ReportVisitor::enterTable(Table &t)
+void ReportVisitor::enterTable(Table & /*t*/)
 {
 }
 
-void ReportVisitor::exitTable(Table &t)
+void ReportVisitor::exitTable(Table & /*t*/)
 {
 }
 

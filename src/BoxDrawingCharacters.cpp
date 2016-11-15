@@ -11,7 +11,6 @@
  */
 #include "BoxDrawingCharacters.h"
 #include <stdio.h>
-#include "String.h"
 
 namespace report_generator
 {
@@ -94,10 +93,21 @@ static std::string utf8(int c)
     {
 	std::string s;
 	s.push_back(0xe0 | (c >> 12));
-	s.push_back(0x80 | (c >> 6) & 0x3f);
+	s.push_back(0x80 | ((c >> 6) & 0x3f));
 	s.push_back(0x80 | (c & 0x3f));
 	return s;
     }
+}
+
+// Repeat the supplied string n times
+static std::string repeat(const std::string &str, int n)
+{
+    std::string ret;
+
+    for(int i = 0; i < n; i++)
+	ret += str;
+
+    return ret;
 }
 
 std::string getLineStr(int line_type, int num)
